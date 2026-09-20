@@ -1,0 +1,26 @@
+{
+  "name": "accounts_node",
+  "version": "1.0.0",
+  "description": "Projeto feiro em Node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuanRodrigues-Dev/Projeto_Accounts.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/JuanRodrigues-Dev/Projeto_Accounts/issues"
+  },
+  "homepage": "https://github.com/JuanRodrigues-Dev/Projeto_Accounts#readme",
+  "dependencies": {
+    "chalk": "^6.0.0",
+    "inquirer": "^14.2.2"
+  }
+}
