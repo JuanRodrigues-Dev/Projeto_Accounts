@@ -104,13 +104,7 @@ function deposito() {
 }
 
 
-function checkAccount(accountName) {
-    if (!fs.existsSync(`accounts/${accountName}.json`)) {
-        console.log(chalk.bgRed.black('Esta Conta não existe , escolha outro nome!'))
-        return false
-    }
-    return true
-}
+
 
 function addAmount(accountName, amount) {
     const account = getAccount(accountName)
@@ -133,13 +127,7 @@ function addAmount(accountName, amount) {
     operation()
 }
 
-function getAccount(accountName) {
-    const accountJSON = fs.readFileSync(`accounts/${accountName}.json`, {
-        encoding: 'utf8',
-        flag: 'r'
-    })
-    return JSON.parse(accountJSON)
-}
+
 
 //show account balance
 function getAccountBalance() {
@@ -217,6 +205,23 @@ function removeAmount(accountName, amount) {
 
   console.log(chalk.green(`Foi realizado o saque de R$${amount} na sua conta`));
   operation()
+}
+
+// **** HELPERS **** //
+// helper check Account
+function checkAccount(accountName) {
+    if (!fs.existsSync(`accounts/${accountName}.json`)) {
+        console.log(chalk.bgRed.black('Esta Conta não existe , escolha outro nome!'))
+        return false
+    }
+    return true
+}
+function getAccount(accountName) {
+    const accountJSON = fs.readFileSync(`accounts/${accountName}.json`, {
+        encoding: 'utf8',
+        flag: 'r'
+    })
+    return JSON.parse(accountJSON)
 }
 
 
